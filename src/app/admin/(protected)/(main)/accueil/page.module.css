@@ -1,0 +1,33 @@
+.page {
+    min-height: 100vh;
+    padding: 32px;
+    background-color: #16181d;
+    color: #e8e8ea;
+    font-family: inherit;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.badge {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #5b6bf5;
+}
+
+.title {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 0;
+    color: #a8adb8;
+    font-size: 14px;
+}

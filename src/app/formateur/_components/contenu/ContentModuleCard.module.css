@@ -1,0 +1,61 @@
+.cardWrapper {
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    height: 100%;
+}
+
+.title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.description {
+    margin: 0;
+    flex: 1;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/** Coin supérieur droit, discret jusqu'au survol — un geste destructif ne doit pas être le 1er élément qui attire l'œil sur la carte. */
+.trashButton {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.cardWrapper:hover .trashButton {
+    opacity: 1;
+}
+
+.trashButton:hover {
+    color: var(--color-error);
+}
+
+.trashButton:focus-visible {
+    opacity: 1;
+    outline: 2px solid var(--color-border-focus);
+}

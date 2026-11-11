@@ -1,0 +1,228 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.sectionLabel {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.videoSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.videoPreview {
+    width: 100%;
+    border-radius: var(--radius-md);
+    background-color: #000;
+}
+
+.noVideoPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-disabled);
+    font-size: var(--font-size-sm);
+}
+
+.actionsRow {
+    display: flex;
+}
+
+.startIndicator {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-success);
+}
+
+.decisionPointsSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.emptyNote {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.decisionPointCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.dpHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.timestampField {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.timestampInput {
+    width: 64px;
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-card);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    text-align: center;
+}
+
+.timestampInput:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.removeDpButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removeDpButton:hover {
+    color: var(--color-error);
+}
+
+.choicesList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.choiceRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.correctMarker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    background: none;
+    color: var(--color-text-disabled);
+    cursor: pointer;
+}
+
+.correctMarkerActive {
+    border-color: var(--color-warning);
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.choiceFields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.choiceLabelInput,
+.choiceTargetSelect {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+}
+
+.choiceLabelInput:focus,
+.choiceTargetSelect:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.removeChoiceButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removeChoiceButton:hover {
+    color: var(--color-error);
+}
+
+.addChoiceButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-sm);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.addChoiceButton:hover {
+    border-color: var(--color-text-disabled);
+    color: var(--color-text-primary);
+}
+
+.dangerZone {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.blockedDeleteNote {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

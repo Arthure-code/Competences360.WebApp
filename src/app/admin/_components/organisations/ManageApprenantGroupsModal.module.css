@@ -1,0 +1,37 @@
+.title {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hint {
+    font-size: 14px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 8px;
+}
+
+.groupName {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.closeRow {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}

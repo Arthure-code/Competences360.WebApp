@@ -1,0 +1,389 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.overviewSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.overviewCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.overviewText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.overviewTitle {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.overviewCaption {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.overviewRadial {
+    max-width: 140px;
+}
+
+.countGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+.countCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+}
+
+.countCardLate {
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
+}
+
+.countValue {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.countLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.sectionTitle {
+    margin: 0 0 var(--space-3);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.emptyText {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.sectionHint {
+    margin: calc(var(--space-3) * -1) 0 var(--space-3);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.moduleGroup {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.moduleGroup:last-child {
+    border-bottom: none;
+}
+
+.moduleTrigger {
+    padding: var(--space-4);
+}
+
+.status_complete {
+    border-left: 3px solid var(--color-success);
+}
+
+.status_late {
+    border-left: 3px solid var(--color-error);
+}
+
+.status_in-progress {
+    border-left: 3px solid var(--color-info);
+}
+
+.status_todo {
+    border-left: 3px solid transparent;
+}
+
+.moduleCategoryRow {
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.niveauList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: 0 var(--space-4) var(--space-4);
+}
+
+.niveauRow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.niveauMainRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.niveauAttemptsHistory {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--color-border);
+}
+
+.niveauAttemptsLabel {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    margin-bottom: 2px;
+}
+
+.niveauAttemptEntry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.niveauAttemptNumber {
+    flex: 1;
+}
+
+.niveauAttemptScore {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.niveauAttemptDate {
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.niveauInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.niveauTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.niveauMeta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.niveauScore {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.niveauStatus {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.niveauStatus_done {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.niveauStatus_in-progress {
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+}
+
+.niveauStatus_todo {
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+}
+
+.attemptsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.attemptRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.attemptInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.attemptTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.attemptModule {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.attemptScore {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.attemptMeta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.tiersGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.tierColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.tierLabel {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    width: fit-content;
+}
+
+.tierLabelBest {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.tierLabelAverage {
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+}
+
+.tierLabelWeak {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.tierItem {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.weakSpotsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.weakSpotRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background-color: var(--color-error-light);
+}
+
+.weakSpotInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.weakSpotTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.weakSpotModule {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.weakSpotScore {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-error);
+}
+
+@media (min-width: 768px) {
+    .tiersGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 640px) {
+    .overviewSection {
+        flex-direction: row;
+    }
+
+    .overviewCard {
+        flex: 1;
+    }
+
+    .countGrid {
+        grid-template-columns: repeat(4, 1fr);
+        flex: 1;
+    }
+}

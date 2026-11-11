@@ -1,0 +1,155 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3, 12px);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2, 8px);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3, 12px);
+    padding: var(--space-3, 12px) var(--space-4, 16px);
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: var(--radius-md, 8px);
+}
+
+.rowInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3, 12px);
+    min-width: 0;
+}
+
+.rowTitle {
+    font-size: var(--font-size-sm, 14px);
+    font-weight: var(--font-weight-semibold, 600);
+    color: var(--color-text-primary);
+}
+
+.badgeOfficial {
+    flex-shrink: 0;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badgeDraft {
+    flex-shrink: 0;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background-color: var(--color-bg-page, #f4f4f5);
+    color: var(--color-text-muted, #6b7280);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.rowActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.viewButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: var(--radius-md, 8px);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.viewButton:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.viewUnavailable {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: var(--radius-md, 8px);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-disabled, #c4c4c8);
+    cursor: default;
+}
+
+.trashButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    padding: 6px 12px;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-md, 8px);
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #991b1b;
+    cursor: pointer;
+}
+
+.trashButton:hover {
+    background-color: #fee2e2;
+}
+
+.modalTitle {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modalText {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.fieldLabel {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.textarea {
+    font-family: var(--font-family);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    font-size: 14px;
+    resize: vertical;
+}
+
+.error {
+    font-size: 13px;
+    color: #991b1b;
+    margin-bottom: 12px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}

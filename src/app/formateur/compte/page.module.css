@@ -1,0 +1,18 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.twoColumnRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 720px) {
+    .twoColumnRow {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}

@@ -1,0 +1,87 @@
+.thread {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: fit-content;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    background: none;
+    padding: var(--space-2) var(--space-3);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.addButton:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-muted);
+}
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.addTextarea {
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    resize: vertical;
+}
+
+.addTextarea:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.addFormActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+}
+
+.textButton {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.primaryTextButton {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.primaryTextButton:disabled {
+    color: var(--color-text-muted);
+    cursor: default;
+}

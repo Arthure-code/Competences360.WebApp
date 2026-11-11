@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    width: 100%;
+}
+.customTabs {
+  grid-template-columns: repeat(1, 1fr) ;
+  width: 100%;
+}
+
+@media (min-width: 425px) {
+    .customTabs {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}

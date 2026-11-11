@@ -1,0 +1,22 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.content {
+    padding: var(--space-8) var(--space-4);
+    background-color: var(--color-bg-page);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+
+    .content {
+        padding: var(--space-10) var(--space-8);
+    }
+}

@@ -1,0 +1,78 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.statsRow {
+    display: flex;
+    gap: 12px;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.statValue {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.statLabel {
+    font-size: 13px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.empty {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.attentionList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.attentionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    text-decoration: none;
+    color: inherit;
+}
+
+.attentionRow:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.attentionLabel {
+    font-size: 13px;
+    font-weight: 600;
+}

@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-3);
+    padding: var(--space-10) var(--space-4);
+}
+
+.bordered {
+    width: 100%;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.iconCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-border);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-disabled);
+}
+
+.title {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}
+
+.description {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}

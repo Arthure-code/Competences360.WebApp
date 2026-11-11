@@ -1,0 +1,66 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.sentence {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--space-1) var(--space-2);
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-primary);
+    text-align: center;
+}
+
+.text {
+    white-space: pre-wrap;
+}
+
+.blank {
+    min-width: 80px;
+    max-width: 100%;
+    padding: var(--space-1) var(--space-2);
+    border: none;
+    border-bottom: 2px solid var(--color-border);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    background-color: var(--color-bg-page);
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-align: center;
+    transition: border-color var(--transition-fast), color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.blank:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.blank:disabled {
+    background-color: transparent;
+    color: var(--color-text-primary);
+}
+
+.correct {
+    border-color: var(--color-success);
+    color: var(--color-success);
+}
+
+.incorrect {
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+.actionRow {
+    display: flex;
+    justify-content: center;
+}

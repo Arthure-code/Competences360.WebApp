@@ -1,0 +1,98 @@
+/**
+ * .wrapper/.imageWrapper/.resultIcon/.actionRow/.correct/.incorrect
+ * viennent de zcStyles (ZoneCliquableRenderer.module.css, réutilisé tel
+ * quel, voir ZoneRemplirRenderer.tsx) — seules les classes ci-dessous
+ * sont propres à ce fichier : un champ texte, contrairement à un bouton,
+ * a besoin de son propre style de zone/input.
+ */
+
+.zone {
+    position: absolute;
+    border-radius: var(--radius-sm);
+}
+
+.zoneInput {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    color: var(--color-text-primary);
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0 var(--space-1);
+}
+
+.zoneInput::placeholder {
+    color: var(--color-text-disabled);
+    letter-spacing: 0.05em;
+}
+
+.zoneInput:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.zoneInput:focus-visible {
+    outline: 2px solid var(--color-border-focus, var(--color-text-primary));
+    outline-offset: 2px;
+}
+
+.resultIconPosition {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.zoneIndex {
+    position: absolute;
+    top: -9px;
+    left: -9px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-inverse);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    pointer-events: none;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: 0;
+    padding: var(--space-4);
+    list-style: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.legendItem {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.legendIndex {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-inverse);
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+}

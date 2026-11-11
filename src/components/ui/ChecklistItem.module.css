@@ -1,0 +1,29 @@
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.iconCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-secondary);
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+    color: var(--color-text-inverse);
+}
+
+.text {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-normal);
+}

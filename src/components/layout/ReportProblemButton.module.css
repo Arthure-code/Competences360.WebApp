@@ -1,0 +1,187 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 13px;
+}
+
+.button:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-primary);
+}
+
+.label {
+    display: none;
+}
+
+
+
+@media (min-width: 640px) {
+    .label {
+        display: inline;
+    }
+}
+
+.formTitle {
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.empty {
+    font-size: 13px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.listRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-family);
+}
+
+.listRow:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.listRowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.listRowTitle {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.listRowDate {
+    font-size: 11px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.backLink {
+    align-self: flex-start;
+    font-family: var(--font-family);
+    border: none;
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5b6bf5;
+    cursor: pointer;
+    padding: 0;
+}
+
+.detailHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.messageAdmin {
+    background-color: #eef0ff;
+}
+
+.messageHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.messageAuthor {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.messageDate {
+    font-size: 11px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.messageText {
+    margin: 0;
+    font-size: 13px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.fieldLabel {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input,
+.textarea {
+    font-family: var(--font-family);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    font-size: 14px;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.successState {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}

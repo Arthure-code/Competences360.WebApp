@@ -1,0 +1,11 @@
+.modulesSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.moduleList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}

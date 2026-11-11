@@ -1,0 +1,550 @@
+/* Mobile (par défaut) — colonne unique, le panneau de config devient une
+   feuille collée en bas de l'ÉCRAN (position: fixed), visible par-dessus
+   l'image plutôt qu'empilée en dessous — jamais besoin de défiler pour
+   voir les deux en même temps. N'apparaît QUE s'il y a quelque chose à
+   configurer (voir le rendu conditionnel dans le composant) — pas de
+   placeholder vide qui prendrait de la place pour rien. */
+.editorLayout {
+    display: block;
+}
+
+.imageColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.configColumn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: var(--space-4);
+    padding-top: var(--space-8);
+    background-color: var(--color-bg-card);
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.configColumnCloseMobile {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+/* Desktop/tablette large — 2 colonnes côte à côte, le panneau de droite
+   reste TOUJOURS au même endroit (jamais de va-et-vient vertical) :
+   l'image à gauche, sa config à droite, les deux visibles en même temps
+   sans défiler. */
+@media (min-width: 900px) {
+    .editorLayout {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-5);
+    }
+
+    .imageColumn {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .configColumn {
+        position: sticky;
+        top: var(--space-4);
+        left: auto;
+        right: auto;
+        bottom: auto;
+        z-index: auto;
+        width: 320px;
+        flex-shrink: 0;
+        max-height: calc(100vh - var(--space-8));
+        padding: var(--space-5);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        box-shadow: none;
+    }
+
+    /* Le bouton fermer n'a de sens que sur la feuille mobile (position fixed, superposée) — en colonne fixe desktop, rien à "fermer". */
+    .configColumnCloseMobile {
+        display: none;
+    }
+}
+
+.headerEdit {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.tag {
+    width: fit-content;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+}
+
+.promptInput {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    resize: vertical;
+}
+
+.uploadZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-8);
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.uploadIcon {
+    font-size: 32px;
+    color: var(--color-text-muted);
+}
+
+.uploadText {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.uploadButton {
+    padding: var(--space-2) var(--space-5);
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+}
+
+.instructions {
+    margin: 0 0 var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.zoomControls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.zoomButton {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+.zoomButton:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.zoomButton:hover:not(:disabled) {
+    background-color: var(--color-bg-page);
+}
+
+.zoomReset {
+    min-width: 52px;
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    text-align: center;
+}
+
+.zoomReset:hover {
+    color: var(--color-primary);
+}
+
+.zoomHint {
+    font-size: var(--font-size-xs);
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+/* Le navigateur gère le défilement nativement (souris, tactile, trackpad)
+   une fois l'image plus large que cette zone — aucune logique de glisser
+   personnalisée à construire pour naviguer dans l'image zoomée. */
+.zoomScrollArea {
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+    /* min-width: 0 — sans ça, un enfant dans un conteneur flex/grid garde
+       sa taille de CONTENU minimum par défaut (min-width: auto), ce qui
+       annule max-width: 100% et laisse l'image zoomée élargir tout le
+       panneau parent au lieu de rester dedans avec une barre de
+       défilement. Piège CSS classique, pas évident à deviner. */
+    min-width: 0;
+    overflow: auto;
+    border-radius: var(--radius-lg);
+}
+
+.drawSurface {
+    cursor: crosshair;
+    /* PAS touch-action:none ici — bloquerait le défilement tactile natif
+       utilisé pour naviguer dans l'image zoomée. Les gestes qui doivent
+       vraiment bloquer le défilement (dessiner, déplacer une zone) le
+       font déjà via e.preventDefault() en JS, seulement pendant le
+       geste actif — voir handleTouchMove. .zone, elle, garde son propre
+       touch-action:none : toucher une zone doit toujours la déplacer,
+       jamais faire défiler. */
+
+    width: auto;
+}
+
+.zone {
+    position: absolute;
+    border: 2px dashed var(--color-primary);
+    background-color: rgba(91, 107, 245, 0.1);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+}
+
+.zoneSelected {
+    border-style: solid;
+    background-color: rgba(91, 107, 245, 0.25);
+}
+
+.zoneMoving {
+    cursor: grabbing;
+    border-style: solid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.zoneIndex {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-full);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.draftZone {
+    position: absolute;
+    border: 2px dashed var(--color-text-muted);
+    background-color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+}
+
+.footerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+}
+
+.zoneCount {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.changeImageButton {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.warning {
+    margin: var(--space-2) 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-warning);
+}
+
+.undoButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.undoButton:hover {
+    background-color: var(--color-primary-light);
+}
+
+.zoneConfigPanel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.zoneConfigHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.zoneConfigTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.removeZoneButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    border: none;
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removeZoneButton:hover {
+    color: var(--color-error);
+}
+
+.row {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    flex: 1;
+}
+
+.fieldLabel {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.fieldHint {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.input {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+}
+
+.charCounter {
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+}
+
+.fixedLengthNote {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Pastille de type — DIRECTEMENT posée sur la cellule de bordure elle-même
+   (rangée du haut ou colonne de gauche), pas une bande séparée à faire
+   correspondre visuellement. Dépasse légèrement vers l'extérieur de la
+   cellule (top négatif ou left négatif) pour rester lisible sans cacher
+   le contenu de la cellule elle-même. */
+.headerPillOnCell {
+    position: absolute;
+    z-index: 5;
+    font-family: var(--font-family);
+    font-size: 9px;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    text-align-last: center;
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+/* Axe colonne — la pastille dépasse au-dessus de la cellule du haut. */
+.headerPillOnCellTop {
+    top: -18px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+}
+
+/* Axe ligne — la pastille dépasse à gauche de la cellule de gauche, texte vertical (manque de place en largeur sinon). */
+.headerPillOnCellLeft {
+    left: -24px;
+    top: 0;
+    width: 22px;
+    height: 100%;
+    writing-mode: vertical-rl;
+}
+
+/* Badge de suppression de grille — TOUJOURS visible au coin supérieur
+   droit de la grille, jamais caché dans un panneau qu'il faut d'abord
+   ouvrir. */
+.deleteGridBadge {
+    position: absolute;
+    z-index: 6;
+    transform: translate(2px, -2px);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-full);
+    background-color: var(--color-error);
+    color: var(--color-text-inverse);
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.deleteGridBadge:hover {
+    background-color: var(--color-error-dark, var(--color-error));
+    transform: translate(2px, -2px) scale(1.1);
+}
+
+.gridPreview {
+    position: absolute;
+    border: 2px solid var(--color-primary);
+}
+
+.dividerCol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    margin-left: -5px;
+    cursor: col-resize;
+    touch-action: none;
+}
+
+.dividerCol::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-primary);
+}
+
+.dividerCol:hover::after {
+    background-color: var(--color-text-primary);
+    width: 3px;
+    left: 3.5px;
+}
+
+.dividerRow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    margin-top: -5px;
+    cursor: row-resize;
+    touch-action: none;
+}
+
+.dividerRow::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.dividerRow:hover::after {
+    background-color: var(--color-text-primary);
+    height: 3px;
+    top: 3.5px;
+}
+
+.gridConfigPanel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary-light);
+}
+
+.gridConfigActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+}

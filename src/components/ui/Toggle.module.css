@@ -1,0 +1,36 @@
+.track {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 42px;
+    height: 24px;
+    padding: 2px;
+    border: none;
+    border-radius: var(--radius-full);
+    background-color: var(--color-border);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.trackChecked {
+    background-color: var(--color-secondary);
+}
+
+.trackDisabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-card);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast);
+}
+
+.thumbChecked {
+    transform: translateX(18px);
+}

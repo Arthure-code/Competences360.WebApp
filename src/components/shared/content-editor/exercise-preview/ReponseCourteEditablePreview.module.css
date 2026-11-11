@@ -1,0 +1,223 @@
+.headerEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tag {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.promptInput {
+    width: 100%;
+    border: none;
+    background: none;
+    resize: none;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
+
+.promptInput:focus {
+    outline: none;
+    background-color: var(--color-bg-page);
+    border-radius: var(--radius-md);
+}
+
+.segmentWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.textInput {
+    border: 1px dashed transparent;
+    background: none;
+    font: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+.textInput:hover,
+.textInput:focus {
+    outline: none;
+    border-color: var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.blankToken {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    max-width: 160px;
+    cursor: pointer;
+}
+
+.blankTokenActive {
+    border-color: var(--color-border-focus);
+    background-color: var(--color-bg-card);
+}
+
+.blankTokenLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.blankTokenBadge {
+    flex-shrink: 0;
+    padding: 0 var(--space-1);
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+    font-size: 0.65em;
+    font-weight: var(--font-weight-semibold);
+}
+
+.removeSegmentButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    color: var(--color-text-disabled);
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+}
+
+.removeSegmentButton:hover {
+    color: var(--color-error);
+}
+
+.addRow {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.addButton:hover {
+    border-color: var(--color-text-disabled);
+    color: var(--color-text-primary);
+}
+
+/* Banque de réponses du trou sélectionné — apparaît sous la phrase, jamais inline. */
+.answerBank {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.answerBankHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.answerBankLabel {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+.closeBankButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.closeBankButton:hover {
+    color: var(--color-text-primary);
+}
+
+.answerList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.answerRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.answerInput {
+    flex: 1;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+}
+
+.answerInput:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.removeAnswerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removeAnswerButton:hover:not(:disabled) {
+    color: var(--color-error);
+}
+
+.removeAnswerButton:disabled {
+    opacity: 0.3;
+    cursor: default;
+}

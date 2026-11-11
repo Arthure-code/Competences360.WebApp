@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.viewfinder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 160px;
+    height: 160px;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-card);
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sert au décodage, jamais affiché. */
+.canvas {
+    display: none;
+}
+
+.illustration {
+    width: 128px;
+    height: 128px;
+    opacity: 0.4;
+}
+
+/* Le PNG rendu par l'API est bien plus grand : pixelated coupe le lissage du
+   navigateur, sans quoi les bords de module ressortent en gris. */
+.qrDuGroupe {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+.label {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-disabled);
+}
+
+.hint {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+    margin: 0;
+}

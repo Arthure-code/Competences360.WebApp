@@ -1,0 +1,213 @@
+.panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    background-color: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-normal);
+}
+
+.collapsed {
+    transform: translateY(calc(100% - 52px));
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.grabber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-3);
+    border: none;
+    background: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.grabberHandle {
+    width: 36px;
+    height: 4px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-border);
+}
+
+.grabberLabel {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+.body {
+    padding: 0 var(--space-6) var(--space-6);
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.subtitle {
+    margin: var(--space-1) 0 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    border: none;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.closeButton:hover {
+    color: var(--color-text-primary);
+}
+
+.field {
+    margin: 0 0 var(--space-3);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-normal);
+}
+
+.fieldLabel {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.calloutLabel {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.hint {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+    font-size: var(--font-size-base);
+}
+
+/* Mise en page seulement — la couleur dépend du résultat (voir .explanationSuccess/.explanationError, CorrectionPanel.tsx choisit laquelle selon isSuccess). */
+.explanation {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+}
+
+.explanationSuccess {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.explanationError {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    margin-top: var(--space-4);
+}
+
+.position {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    /*
+     * Desktop : carte flottante ancrée en bas-à-droite plutôt qu'un bandeau
+     * pleine largeur centré. Un bandeau centré finit toujours par recouvrir
+     * le centre de l'écran — précisément où vit l'exercice — ce qui va à
+     * l'encontre du principe "ne recouvre pas l'exercice" (voir
+     * EXERCISE_TYPES.md, "Correction et feedback"). En bas-à-droite, la
+     * carte reste visible sans jamais chevaucher un champ de saisie centré
+     * comme celui de Réponse courte.
+     */
+    .panel {
+        left: auto;
+        right: var(--space-6);
+        bottom: var(--space-6);
+        width: min(420px, calc(100% - var(--space-8)));
+        max-height: min(80vh, 640px);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        transform: translateY(0);
+    }
+
+    .collapsed {
+        transform: translateY(calc(100% - 52px));
+    }
+
+    .open {
+        transform: translateY(0);
+    }
+}

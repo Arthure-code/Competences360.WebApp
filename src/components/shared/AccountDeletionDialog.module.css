@@ -1,0 +1,43 @@
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    font-size: var(--font-size-4xl);
+    color: var(--color-text-primary);
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.message {
+    margin: 0;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.actions[data-count="2"] {
+    flex-direction: row;
+}
+
+.actions[data-count="2"] > * {
+    flex: 1;
+}
+
+.actions:not([data-count="2"]) {
+    flex-direction: column;
+}

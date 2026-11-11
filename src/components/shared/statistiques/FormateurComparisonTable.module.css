@@ -1,0 +1,110 @@
+.table {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+}
+
+.header,
+.row {
+    display: grid;
+    grid-template-columns: 50px 1.6fr 100px 100px 1.8fr 100px;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    min-width: 640px;
+}
+
+.header {
+    background-color: var(--color-bg-page);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header span {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+}
+
+.sortableHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.sortableHeader:hover {
+    color: var(--color-text-primary);
+}
+
+.sortIcon {
+    font-size: 10px;
+    opacity: 0.4;
+}
+
+.sortIconActive {
+    font-size: 10px;
+    color: var(--color-primary);
+}
+
+.row {
+    border-top: 1px solid var(--color-border);
+}
+
+.row:first-child {
+    border-top: none;
+}
+
+.rank {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-muted);
+}
+
+.name {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.groupCount,
+.apprenantCount {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.progressCell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.progressValue {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    flex-shrink: 0;
+    width: 40px;
+}
+
+.lateCount {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-warning);
+}
+
+.noLate {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}

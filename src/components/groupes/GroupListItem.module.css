@@ -1,0 +1,105 @@
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1.4fr 1fr 1.2fr;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.name {
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.org {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.contactName {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.contactRole {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.modules {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.modulesCount {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.modulesLate {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-error);
+}
+
+.modulesOk {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progressLabel {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+}
+
+.progressValue {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+}

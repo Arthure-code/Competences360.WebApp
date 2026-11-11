@@ -1,0 +1,38 @@
+/**
+ * Styles partagés par toutes les mécaniques utilisant dnd-kit. Ce sont des
+ * choix de design system — l'apparence du drag lui-même — pas des choix
+ * propres à une mécanique. À faire évoluer ici plutôt que dans chaque
+ * .module.css d'exercice.
+ *
+ * Usage : appliquer ces classes en plus des classes locales, directement
+ * dans le composant (pas de `composes` CSS pour rester simple à travers
+ * les setups de build) :
+ *
+ *   className={[styles.item, isDragging ? dndShared.dragOrigin : ""].join(" ")}
+ *
+ * Les couleurs propres à l'état de correction (correct/incorrect, filled,
+ * etc.) restent définies dans le .module.css de chaque mécanique : seule
+ * l'apparence du geste de drag est mutualisée ici.
+ */
+
+/**
+ * Emplacement d'origine pendant un drag : un "trou" pointillé plutôt qu'un
+ * élément plein, pour montrer clairement qu'il a quitté sa place — ce que
+ * suit le curseur (`.dragOverlay`) reste opaque.
+ */
+.dragOrigin {
+    opacity: 0.35;
+    border-style: dashed;
+    background-color: var(--color-bg-page);
+}
+
+/**
+ * Rendu à l'intérieur d'un DragOverlay dnd-kit : c'est lui, opaque, qui
+ * suit le curseur — pas de transition (le positionnement est géré par
+ * dnd-kit), une légère élévation pour marquer qu'il flotte au-dessus du
+ * reste de l'interface.
+ */
+.dragOverlay {
+    cursor: grabbing;
+    box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.15));
+}

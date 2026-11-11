@@ -1,0 +1,137 @@
+.wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--space-4);
+    pointer-events: none
+}
+
+.card {
+    width: 100%;
+    max-width: 425px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    pointer-events: auto
+}
+
+.iconWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 0.3em;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-page);
+    aspect-ratio: 1;
+}
+ 
+.icon {
+    color: var(--color-text-primary);
+}
+
+.text {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    margin: 0;
+}
+
+.link {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-2);
+}
+
+.acceptWrap,
+.rejectWrap,
+.customizeWrap {
+    width: 100% ;
+
+    button {
+        width: 100%;
+    }
+}
+
+.acceptWrap {
+    order: 1;
+}
+
+.rejectWrap {
+    order: 2;
+}
+
+.customizeWrap {
+    order: 3;
+}
+
+@media (min-width: 860px) {
+    .wrapper {
+        padding: var(--space-5);
+    }
+
+    .card {
+        max-width: var(--content-max-width);
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: var(--space-6) clamp(var(--space-6), 5vw, 5rem);
+        gap: var(--space-16);
+    }
+
+    .iconWrap {
+        flex-shrink: 0;
+    }
+
+    .text {
+        flex: 1;
+        font-size: var(--font-size-base);
+    }
+
+    .actions {
+        flex-direction: row;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .acceptWrap,
+    .rejectWrap,
+    .customizeWrap {
+        width: auto;
+    }
+
+    .customizeWrap {
+        order: 1;
+    }
+
+    .rejectWrap {
+        order: 2;
+    }
+
+    .acceptWrap {
+        order: 3;
+    }
+}

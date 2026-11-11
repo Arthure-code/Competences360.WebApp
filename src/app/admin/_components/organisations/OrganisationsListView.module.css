@@ -1,0 +1,44 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rowLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.row:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.empty {
+    font-size: 14px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.highlight {
+    background-color: #fff3d6;
+    color: #92600a;
+    border-radius: 3px;
+    padding: 0 2px;
+}

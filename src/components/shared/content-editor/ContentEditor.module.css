@@ -1,0 +1,157 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.topbarInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-width: 0;
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding-right: var(--space-3);
+    border-right: 1px solid var(--color-border);
+}
+
+.backLink:hover {
+    color: var(--color-text-primary);
+}
+
+.moduleTitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.versionNumberBadge {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+}
+
+.statusBadge {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+}
+
+.topbarActions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-shrink: 0;
+}
+
+.saveGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.saveIndicator {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.manualSaveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    border: none;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.manualSaveButton:hover:not(:disabled) {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+}
+
+.manualSaveButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.readOnlyBanner {
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    flex-shrink: 0;
+}
+
+.reviewBanner {
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.reviewBannerStatus {
+    color: var(--color-text-muted);
+}
+
+.resubmitError {
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    flex-shrink: 0;
+}
+
+.body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.mainPanel {
+    flex: 1;
+    min-width: 0;
+    overflow-y: auto;
+    padding: var(--space-6);
+}

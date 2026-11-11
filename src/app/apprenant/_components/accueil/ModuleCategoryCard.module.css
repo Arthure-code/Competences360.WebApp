@@ -1,0 +1,66 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.iconTile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: color-mix(in srgb, var(--category-color) 15%, white);
+    margin-bottom: var(--space-1);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    color: var(--category-color);
+}
+
+.title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.description {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-normal);
+    display: none;
+    opacity: 0;
+}
+
+.progressFill {
+    background-color: var(--category-color);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.card:hover {
+    .description {
+       display: block;
+       opacity: 1;
+    }
+}

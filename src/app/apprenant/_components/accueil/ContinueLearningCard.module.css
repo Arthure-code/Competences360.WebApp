@@ -1,0 +1,38 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    height: 100%;
+}
+
+.emptyTitle {
+    margin: 0 0 var(--space-1);
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+}
+
+.savedAt,
+.questionProgress {
+    white-space: nowrap;
+}
+
+.exerciseTitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}

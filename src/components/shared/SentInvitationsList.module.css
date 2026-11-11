@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-page);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.email {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+}
+
+.status {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+}
+
+.pending {
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.accepted {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.expired {
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+}

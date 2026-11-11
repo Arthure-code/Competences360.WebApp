@@ -1,0 +1,49 @@
+.faqSection {
+    width: 100%;
+    /* background-color: var(--color-bg-card); */
+    display: flex;
+    justify-content: center;
+    /* padding: var(--space-12) var(--space-4); */
+}
+
+.faqInner {
+    width: 100%;
+    max-width: 720px;
+}
+
+.emptyState {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* .listItem {
+    /* Le style visuel (bordure, fond, radius) est géré par Drawer *
+} */
+
+.highlight {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-orange);
+    border-radius: var(--radius-sm);
+    padding: 0 2px;
+}
+
+.link {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.link:hover {
+    color: var(--color-primary-hover);
+}

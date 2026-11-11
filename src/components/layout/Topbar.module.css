@@ -1,0 +1,129 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-5) var(--space-8);
+    padding-right: 0;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.searchArea {
+    display: none;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+}
+
+.iconButtons {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.iconButton {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.iconButton:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-primary);
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile-first : la photo seule mène à Mon compte, nom/rôle apparaissent à partir de 640px */
+.userLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+}
+
+.user {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: var(--line-height-tight);
+    width: fit-content;
+}
+
+.userName {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    text-align: right;
+}
+
+.userRole {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 640px) {
+    .searchArea {
+        display: block;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .topbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-6);
+        padding: var(--space-5) var(--space-8);
+    }
+
+    .user {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .searchArea {
+        max-width: 50vw;
+    }
+
+    .topbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,301 @@
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: var(--space-6);
+    max-width: 100%;
+}
+
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    min-height: 400px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.row {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.row > .field {
+    flex: 1;
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.input,
+.textarea,
+.select {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.input:disabled,
+.textarea:disabled,
+.select:disabled {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+.textarea {
+    resize: none;
+}
+
+.charCount {
+    align-self: flex-end;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.fieldHint {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.practiceItemsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.practiceItemRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.practiceItemRow .input {
+    flex: 1;
+}
+
+.removePracticeItemButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removePracticeItemButton:hover {
+    color: var(--color-error);
+}
+
+.addPracticeItemButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    background: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.addPracticeItemButton:hover:not(:disabled) {
+    border-color: var(--color-text-disabled);
+    color: var(--color-text-primary);
+}
+
+.addPracticeItemButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.exercisesSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.exerciseList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.exerciseListItem {
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.exerciseListItemActive {
+    border-color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+}
+
+.exerciseSelectButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-width: 0;
+    padding: var(--space-3);
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.exerciseIndex {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-page);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.exerciseTypeLabel {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-page);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+.exercisePromptPreview {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+}
+
+.exerciseListActions {
+    display: flex;
+    align-items: center;
+    padding-right: var(--space-2);
+}
+
+.exerciseListActions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: var(--font-size-xs);
+}
+
+.exerciseListActions button:hover:not(:disabled) {
+    color: var(--color-text-primary);
+}
+
+.exerciseListActions button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.previewHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.typeSelect {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+}
+
+.previewArea {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.configPlaceholder {
+    padding: var(--space-6);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.emptyState {
+    margin: auto;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.exerciseCommentsSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 1024px) {
+    .workspace {
+        grid-template-columns: 380px 1fr;
+    }
+}

@@ -1,0 +1,23 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.swatch:hover {
+    transform: scale(1.1);
+}
+
+.swatchActive {
+    border-color: var(--color-text-primary);
+    box-shadow: 0 0 0 2px var(--color-bg-card), 0 0 0 4px var(--color-text-primary);
+}

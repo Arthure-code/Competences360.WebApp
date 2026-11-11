@@ -1,0 +1,194 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 640px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.warningBanner {
+    background-color: #fff3d6;
+    color: #92600a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.statusRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fieldLabel {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nameRow {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    font-size: 14px;
+    font-family: var(--font-family);
+}
+
+.error {
+    margin: 0;
+    font-size: 13px;
+    color: #dc2626;
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.readOnlyHint {
+    margin: -8px 0 0;
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.infoGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border, #e5e7eb);
+    font-size: 13px;
+}
+
+.infoRow:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.infoLabel {
+    font-weight: 600;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.infoValue {
+    text-align: right;
+}
+
+.memberList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.membersHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.utilityLink {
+    font-size: 13px;
+    font-weight: 600;
+    color: #5b6bf5;
+    text-decoration: none;
+}
+
+.utilityLink:hover {
+    text-decoration: underline;
+}
+
+.memberRowWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.memberRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.memberRow:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.memberName {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.memberEmail {
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.memberRoles {
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+    flex-shrink: 0;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.checkboxField {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.hint {
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}

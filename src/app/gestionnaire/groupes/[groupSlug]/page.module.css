@@ -1,0 +1,11 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.roster {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}

@@ -1,0 +1,58 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-4);
+    align-items: start;
+}
+
+.roleBreakdown {
+    display: flex;
+    gap: var(--space-5);
+}
+
+.roleItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.roleCount {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.roleLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.entryLink {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.entryLink:hover {
+    text-decoration: underline;
+}
+
+.entryText {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.entryMeta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

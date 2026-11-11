@@ -1,0 +1,132 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    height: 80vh;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.levelLabel {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+}
+
+.difficultyBadge {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background-color: var(--color-info-light);
+    color: var(--color-info);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.description {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+}
+
+.practiceBox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    background-color: white;
+}
+
+.practiceHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.practiceTitle {
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.practiceList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.actionRow {
+    display: flex;
+    justify-content: center;
+}
+
+.backLink {
+    align-self: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+
+.backLink:hover {
+    color: var(--color-text-primary);
+}
+
+.lockedNotice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-12) var(--space-4);
+    text-align: center;
+}
+
+.lockedText {
+    margin: 0;
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+}

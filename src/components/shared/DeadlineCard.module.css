@@ -1,0 +1,100 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.02em;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+}
+
+.assignedBy {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.assignedBy strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.category {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: fit-content;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+}
+
+.dateGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.dateLabel {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+}
+
+.dateValue {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+/* --- Couleurs par urgence --- */
+.urgent {
+    background-color: var(--color-error-light);
+}
+
+.urgent .badge {
+    background-color: var(--color-error);
+    color: var(--color-text-inverse);
+}
+
+.soon {
+    background-color: var(--color-warning-light);
+}
+
+.soon .badge {
+    background-color: var(--color-warning);
+    color: var(--color-text-inverse);
+}

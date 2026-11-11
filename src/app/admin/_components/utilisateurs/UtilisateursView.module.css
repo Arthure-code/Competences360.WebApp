@@ -1,0 +1,144 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.controlsRow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.searchWrapper {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+    max-width: 480px;
+}
+
+.filterSelect {
+    font-family: var(--font-family);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    font-size: 14px;
+    background-color: var(--color-bg-card, #ffffff);
+}
+
+.searchIcon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: var(--color-text-muted, #6b7280);
+    font-size: 14px;
+}
+
+.search {
+    width: 100%;
+    font-family: var(--font-family);
+    padding: 10px 14px 10px 36px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    font-size: 14px;
+}
+
+.hint {
+    font-size: 14px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.resultsWrapper {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.groupedList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+.alphaRail {
+    position: sticky;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 4px 2px;
+    flex-shrink: 0;
+}
+
+.alphaRailLetter {
+    font-size: 10px;
+    font-weight: 600;
+    color: #5b6bf5;
+    text-decoration: none;
+    width: 16px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.alphaRailLetter:hover {
+    text-decoration: underline;
+}
+
+.alphaRailLetterDisabled {
+    color: var(--color-text-disabled, #d1d5db);
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.groupLetter {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5b6bf5;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.rowInactive {
+    opacity: 0.55;
+}
+
+.rowName {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rowEmail {
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.rowMeta {
+    font-size: 12px;
+    color: var(--color-text-muted, #6b7280);
+}

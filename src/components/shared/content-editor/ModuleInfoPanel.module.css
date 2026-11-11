@@ -1,0 +1,67 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    max-width: 560px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.input,
+.textarea,
+.select {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.input:disabled,
+.textarea:disabled,
+.select:disabled {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+.textarea {
+    resize: none;
+}
+
+.charCount {
+    align-self: flex-end;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}

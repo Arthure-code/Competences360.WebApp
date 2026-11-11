@@ -1,0 +1,63 @@
+.shell {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--color-bg-page);
+    width: 100%;
+    padding-bottom: var(--space-20);
+    font-family: var(--font-family);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: var(--space-4) var(--content-padding);
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--content-padding) var(--content-padding);
+}
+
+.adminZoneBadge {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #5b6bf5;
+    white-space: nowrap;
+    background-color: #10182e;
+    margin-left: var(--space-8);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-md);
+}
+
+@media (min-width: 1024px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+        margin-left: calc(var(--sidebar-width) + var(--space-8));
+    }
+
+    .adminZoneBadge {
+
+        margin-left: 0;
+        margin-right: var(--space-8);
+
+    }
+}

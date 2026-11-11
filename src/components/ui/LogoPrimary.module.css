@@ -1,0 +1,48 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-secondary);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.wordmark {
+  font-family: var(--font-family);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+/* Taille "lg"*/
+.lg .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+}
+
+.lg .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.lg .wordmark {
+  font-size: var(--font-size-xl);
+}

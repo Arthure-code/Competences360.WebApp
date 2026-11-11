@@ -1,0 +1,38 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+.twoColumnRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "continue"
+        "assigned"
+        "deadlines";
+    row-gap: var(--space-8);
+    column-gap: var(--space-10);
+    align-items: start;
+}
+
+.areaContinue {
+    grid-area: continue;
+}
+
+.areaAssigned {
+    grid-area: assigned;
+}
+
+.areaDeadlines {
+    grid-area: deadlines;
+}
+
+@media (min-width: 768px) {
+    .twoColumnRow {
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-areas:
+            "assigned continue"
+            "assigned deadlines";
+    }
+}

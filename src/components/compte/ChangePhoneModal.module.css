@@ -1,0 +1,41 @@
+.otp {
+	display: flex;
+	justify-content: center;
+}
+
+.slots {
+	display: flex;
+	gap: var(--space-2);
+}
+
+.slot {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--space-12);
+	height: var(--space-12);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-semibold);
+	font-variant-numeric: tabular-nums;
+}
+
+.slotActive {
+	outline: 2px solid var(--color-border-focus);
+}
+
+.caret {
+	position: absolute;
+	width: 1px;
+	height: var(--space-6);
+	background: var(--color-text-primary);
+	animation: clignote 1s step-end infinite;
+}
+
+@keyframes clignote {
+	50% {
+		opacity: 0;
+	}
+}

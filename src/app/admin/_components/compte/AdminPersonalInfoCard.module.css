@@ -1,0 +1,81 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6, 24px);
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3, 12px);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3, 12px);
+}
+
+.fieldItem {
+    width: 100%;
+}
+
+.error {
+    margin: 0;
+    font-size: 13px;
+    color: #dc2626;
+}
+
+.passwordField {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--color-bg-page, #f4f4f5);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.passwordLabel {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.passwordRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.passwordDots {
+    font-size: 14px;
+    color: var(--color-text-primary, #16181d);
+    letter-spacing: 0.1em;
+}
+
+.passwordLink {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-primary, #16181d);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.passwordLink:hover {
+    color: #5b6bf5;
+}
+
+@media (min-width: 640px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,210 @@
+.navbar {
+    position: fixed;
+    z-index: var(--z-navbar);
+    background-color: var(--color-bg-navbar);
+    border-radius: var(--radius-lg);
+    max-width: var(--content-max-width);
+    margin: var(--space-4);
+    width: var(--home-section-width);
+
+    /* variables locales */
+    --tab-radius: var(--radius-lg);
+    --tab-active-bg: #ffffff;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    height: var(--navbar-height);
+    padding: 0 var(--space-4);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--color-secondary);
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.toggle:hover {
+    background-color: var(--color-bg-card);
+}
+
+.toggleIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.center,
+.actions {
+    display: none;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    width: var(--navbar-mobile-menu-width);
+    right: 0;
+    z-index: var(--z-dropdown);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-3) var(--space-2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+}
+
+.mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.mobileLinks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0 0 var(--space-4);
+    padding: 0;
+}
+
+.mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.link {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+
+
+@media (min-width: 768px) {
+
+    .bar {
+        padding: 0 var(--space-4) 0 var(--space-4);
+    }
+
+    .toggle,
+    .mobileMenu {
+        display: none;
+    }
+
+    .center {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .links {
+        display: flex;
+        align-items: flex-end;
+        gap: var(--space-3);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .links li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .links .link {
+        padding: var(--space-5);
+        padding: var(--space-5) clamp(var(--space-0-5), 1.5vw + 0.2rem, var(--space-16));
+        border-top-left-radius: var(--tab-radius);
+        border-top-right-radius: var(--tab-radius);
+        height: calc(var(--navbar-height) - 12px);
+        display: inline-flex;
+        align-items: center;
+        transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .links .link:hover:not(.active) {
+        border-radius: var(--tab-radius);
+        background-color: rgba(255, 255, 255, 0.25);
+        color: var(--color-text-primary);
+    }
+
+    .links .link:not(.active) {
+
+        height: calc(var(--navbar-height) - 30px);
+    }
+
+    /* L'ONGLET ACTIF */
+    .links .link.active {
+        color: var(--color-bg-navbar);
+        background-color: var(--tab-active-bg);
+        z-index: 2;
+        corner-bottom-left-shape: scoop;
+        margin-top: var(--space-3);
+        padding-bottom: var(--space-6);
+    }
+
+    /* LE COIN CONCAVE GAUCHE */
+    .links .link.active::before {
+        content: '';
+        position: absolute;
+        bottom: var(--tab-radius);
+        left: calc(-1 * var(--tab-radius));
+        width: calc(1.5 * var(--tab-radius));
+        height: var(--tab-radius);
+        background-color: transparent;
+        border-top-left-radius: var(--tab-radius);
+        box-shadow: 0 var(--tab-radius) 0 0 var(--tab-active-bg);
+        pointer-events: none;
+        corner-top-left-shape: scoop;
+    }
+
+    /* LE COIN CONCAVE DROIT */
+    .links .link.active::after {
+        content: '';
+        position: absolute;
+        bottom: var(--tab-radius);
+        right: calc(-1 * var(--tab-radius));
+        width: calc(1.5 * var(--tab-radius));
+        height: var(--tab-radius);
+        background-color: transparent;
+        border-top-right-radius: var(--tab-radius);
+        box-shadow: 0 var(--tab-radius) 0 0 var(--tab-active-bg);
+        pointer-events: none;
+        corner-top-right-shape: scoop;
+
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        height: 100%;
+    }
+}

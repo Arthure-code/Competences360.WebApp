@@ -1,0 +1,98 @@
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    background-color: var(--color-bg-page);
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    cursor: pointer;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.cardSelected {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-secondary);
+}
+
+.radioInput {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.radioIndicator {
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-bg-card);
+    transition: border-color var(--transition-fast);
+}
+
+.radioIndicatorSelected {
+    border-color: var(--color-secondary);
+    border-width: 5px;
+}
+
+.iconWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-border);
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-secondary);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.title {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.description {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-normal);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+@media (min-width: 700px) {
+
+    .card {
+        padding: var(--space-6);
+    }
+
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--space-5);
+    }
+}

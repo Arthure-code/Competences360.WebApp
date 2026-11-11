@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.fieldRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.stepperButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.stepperButton:hover {
+    border-color: var(--color-text-primary);
+}
+
+.field {
+    width: 160px;
+    padding: var(--space-3) var(--space-4);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-card);
+    font-family: var(--font-family);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-align: center;
+    transition: border-color var(--transition-fast), color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.field:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+}
+
+.field:disabled {
+    color: var(--color-text-primary);
+}
+
+.correct {
+    border-color: var(--color-success);
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.incorrect {
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.unit {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+}
+
+.toleranceHint {
+    margin: calc(var(--space-3) * -1) 0 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.errorHint {
+    margin: calc(var(--space-3) * -1) 0 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--color-error);
+    text-align: center;
+}
+
+.actionRow {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,68 @@
+.group {
+    width: 100%;
+}
+
+.trigger {
+    padding: var(--space-4) var(--space-5);
+}
+
+.versionList {
+    display: flex;
+    flex-direction: column;
+}
+
+.versionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: inherit;
+}
+
+.versionRow:hover {
+    background-color: var(--color-bg-page);
+}
+
+.versionInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.versionTitleRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.versionNumber {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.mineBadge {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.attribution {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.coverage {
+    flex-shrink: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}

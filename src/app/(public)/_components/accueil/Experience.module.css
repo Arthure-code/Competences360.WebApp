@@ -1,0 +1,163 @@
+.section {
+  display: flex;
+  flex-direction: column-reverse;
+/* background-color: var(--color-bg-card); */
+  gap: var(--space-8);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-5);
+
+  border-radius: var(--radius-xl);
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.card {
+  background-color: var(--color-bg-page);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+.cardDescription {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.content,
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.heading {
+  font-family: var(--font-family);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tighter);
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0-5);
+}
+
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary);
+}
+
+@media (min-width: 600px) {
+  .cardTitle {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--space-3);
+  }
+
+  .textContent {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .description {
+    width: 60%;
+    text-align: justify;
+  }
+
+  .checklist {
+    width: max-content;
+  }
+}
+
+@media (min-width: 900px) {
+  .section {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-16) var(--space-6);
+  }
+
+  .grid {
+    flex: 1;
+  }
+
+  .content {
+    flex: 1;
+    padding-left: var(--space-6);
+  }
+
+  .textContent {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .description {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .grid {
+    gap: var(--space-3);
+  }
+
+  .card {
+    gap: var(--space-3);
+  }
+}

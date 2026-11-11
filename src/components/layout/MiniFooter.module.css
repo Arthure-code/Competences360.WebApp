@@ -1,0 +1,106 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-6) var(--space-4);
+    text-align: center;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2) var(--space-5);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition-fast);
+}
+
+.link:hover {
+    color: var(--color-text-primary);
+}
+
+.copyright,
+.credit {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-disabled);
+    margin: 0;
+}
+
+.credit a {
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.credit a:hover {
+    color: var(--color-text-primary);
+}
+
+/* Variante horizontale : liens à gauche, copyright + crédit à droite sur
+   une seule ligne — pensée pour les espaces internes (apprenant/formateur/...),
+   plus compacte qu'un footer public empilé. */
+.horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: var(--space-4) var(--space-6);
+    gap: var(--space-3) var(--space-6);
+}
+
+.horizontal .links {
+    justify-content: flex-start;
+}
+
+.horizontal .meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+.horizontal .credit::before {
+    content: "·";
+    margin: 0 var(--space-2);
+    color: var(--color-text-disabled);
+}
+
+@media (max-width: 640px) {
+    .horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .horizontal .links {
+        justify-content: center;
+    }
+
+    .horizontal .meta {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .horizontal .credit::before {
+        content: "";
+        margin: 0;
+    }
+}

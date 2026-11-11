@@ -1,0 +1,223 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.sectionTitle {
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.sectionEmpty {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+}
+
+.rowInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.moduleTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.meta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.overrideNote {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-warning);
+}
+
+.removeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.removeButton:hover:not(:disabled) {
+    color: var(--color-error);
+}
+
+.removeButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+/* ---------------------------------------------------------------------------
+   PROVISOIRE — à remplacer par la feuille de l'équipe front.
+
+   Le composant a gagné onglets, filtres, badges d'urgence et fenêtre de détail
+   sans que les règles correspondantes soient livrées : `AssignationsView.
+   module.css` avait été enregistré avec le contenu de `ApprenantDossierView.
+   module.css`. Ce qui suit rend la page lisible en attendant leur version ;
+   rien n'y est repris d'une maquette, tout suit les conventions du projet.
+   --------------------------------------------------------------------------- */
+
+.targetTabs,
+.dueDateFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.targetTab,
+.targetTabActive,
+.filterPill,
+.filterPillActive {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-card);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.targetTab:hover,
+.filterPill:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-muted);
+}
+
+.targetTabActive,
+.filterPillActive {
+    background-color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+    color: var(--color-bg-card);
+}
+
+.targetList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.targetGroup {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-card);
+}
+
+.targetTrigger {
+    padding: var(--space-4);
+    font-weight: var(--font-weight-semibold);
+}
+
+.targetGroup .list {
+    padding: 0 var(--space-4) var(--space-4);
+}
+
+/* Le titre porte déjà le nom du module ; l'activité vient en complément. */
+.activityBadge {
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-muted);
+}
+
+.urgencyBadge {
+    flex-shrink: 0;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+}
+
+/* Même vocabulaire que Notice — voir lib/deadlines.ts. */
+.urgency_urgent {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+}
+
+.urgency_soon {
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.urgency_normal {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+}
+
+.detailContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.detailTitle {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.detailRow {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+}
+
+.detailLabel {
+    flex-shrink: 0;
+    min-width: 110px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+}
+
+.detailModuleLink {
+    align-self: flex-start;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary, var(--color-text-primary));
+    text-decoration: underline;
+}

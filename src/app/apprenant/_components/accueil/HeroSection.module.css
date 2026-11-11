@@ -1,0 +1,65 @@
+.heroRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-5);
+    align-items: stretch;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-12);
+}
+
+.heroImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 220px;
+    min-width: 200px;
+    width: 100%;
+    overflow: hidden;
+    align-self: flex-end;
+}
+
+.heroImageContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.welcomeCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    gap: var(--space-4);
+}
+
+.welcomeTitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-tighter);
+}
+
+.welcomeSubtitle {
+    margin: 0;
+    max-width: 46ch;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-normal);
+}
+
+@media (min-width: 540px) {
+    .heroRow {
+        flex-direction: row;
+        padding: 0 var(--space-12);
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcomeTitle {
+        font-size: var(--font-size-4xl);
+    }
+}

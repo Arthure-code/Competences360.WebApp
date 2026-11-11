@@ -1,0 +1,52 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.passwordGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+.passwordFields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.mismatch {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    color: var(--color-error);
+    margin: calc(var(--space-3) * -1) 0 0;
+}
+
+.eyeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--space-1);
+}
+
+.eyeButton:hover {
+    color: var(--color-text-primary);
+}
+
+@media (min-width: 560px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 720px) {
+    .passwordGrid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}

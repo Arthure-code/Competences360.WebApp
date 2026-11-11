@@ -1,0 +1,198 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted, #6b7280);
+    text-decoration: none;
+}
+
+.backLink:hover {
+    color: var(--color-text-primary);
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.currentSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.currentRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 10px;
+    background-color: var(--color-bg-card, #fff);
+}
+
+.currentDate {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.currentActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.secondaryButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.secondaryButton:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.draftBanner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+    font-size: 13px;
+}
+
+.draftBanner svg {
+    flex-shrink: 0;
+}
+
+.draftBanner span {
+    flex: 1;
+}
+
+.draftLink {
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #92400e;
+    text-decoration: underline;
+}
+
+.historySection {
+    display: flex;
+    flex-direction: column;
+}
+
+.noHistory {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 8px;
+}
+
+.rowInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.rowDate {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.rowNote {
+    font-size: 13px;
+    color: var(--color-text-muted, #6b7280);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rowActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.restoreButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid var(--color-border, #e5e7eb);
+    border-radius: 8px;
+    background: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+.restoreButton:hover {
+    background-color: var(--color-bg-page, #f4f4f5);
+}
+
+.restoreButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.modalTitle {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modalText {
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: var(--color-text-muted, #6b7280);
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}

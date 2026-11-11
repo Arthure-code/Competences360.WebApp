@@ -1,0 +1,188 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.targets {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.targetRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.targetLabel {
+    min-width: 96px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.slot {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-height: 48px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1.5px dashed var(--color-border);
+    background-color: var(--color-bg-page);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.slot:hover:not(:disabled) {
+    border-color: var(--color-text-secondary);
+}
+
+.slot:disabled {
+    cursor: default;
+}
+
+/** Surlignage pendant qu'une chip est glissée au-dessus de la cible (useDroppable, isOver). */
+.slotOver {
+    border-style: solid;
+    border-color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+}
+
+.slotPlaceholder {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-disabled);
+}
+
+.slotChip {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.filled {
+    border-style: solid;
+    border-color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+     text-align: left;
+}
+
+.correct {
+    border-style: solid;
+    border-color: var(--color-success);
+    background-color: var(--color-success-light);
+}
+
+.incorrect {
+    border-style: solid;
+    border-color: var(--color-error);
+    background-color: var(--color-error-light);
+}
+
+.resultIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin-left: auto;
+    border-radius: var(--radius-full);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-xs);
+}
+
+.correct .resultIcon {
+    background-color: var(--color-success);
+}
+
+.incorrect .resultIcon {
+    background-color: var(--color-error);
+}
+
+.removeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    color: var(--color-text-disabled);
+    font-size: var(--font-size-base);
+}
+
+.bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    /* padding: var(--space-4); */
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-page);
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-bg-card);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast), opacity var(--transition-fast);
+    /* Toute la chip est draggable (pas seulement une poignée) — empêche le scroll tactile pendant le drag. */
+    touch-action: none;
+}
+
+.chip:hover {
+    border-color: var(--color-text-primary);
+}
+
+.chipSelected {
+    border-color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+    box-shadow: 0 0 0 2px var(--color-bg-card), 0 0 0 4px var(--color-text-primary);
+}
+
+/* L'apparence du drag (origine pointillée pendant le drag, overlay élevé) vit dans dnd/dnd-shared.module.css. */
+
+.chipHandle {
+    color: var(--color-text-disabled);
+    font-size: var(--font-size-xs);
+}
+
+.actionRow {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .board {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        align-items: start;
+        gap: var(--space-8);
+        max-width: none;
+    }
+
+    .bank {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

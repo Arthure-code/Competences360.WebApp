@@ -1,0 +1,27 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+    border: transparent;
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-6);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.button:hover {
+    background-color: var(--color-border);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}

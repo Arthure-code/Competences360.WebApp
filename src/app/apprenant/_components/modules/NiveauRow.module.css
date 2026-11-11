@@ -1,0 +1,136 @@
+/* Mobile d'abord : carte empilée verticalement — icône+titre, puis barre de progression pleine largeur, puis difficulté/statut, puis bouton pleine largeur. */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    min-width: 0;
+}
+
+.iconCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.badge {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-page);
+    color: var(--color-text-muted);
+}
+
+.progressGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.progressBar {
+    flex: 1;
+    height: 6px;
+}
+
+.percent {
+    flex-shrink: 0;
+    width: 40px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-align: right;
+}
+
+.metaGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.difficulty {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.status {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.02em;
+    color: var(--color-text-muted);
+}
+
+.ctaButton {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-4);
+        flex-wrap: wrap;
+    }
+
+    .main {
+        flex: 1 1 260px;
+    }
+
+    .progressGroup {
+        flex: 0 0 160px;
+    }
+
+    .metaGroup {
+        flex: 0 0 auto;
+        gap: var(--space-5);
+    }
+
+    .difficulty,
+    .status {
+        flex: 0 0 90px;
+        text-align: center;
+    }
+
+    .ctaButton {
+        width: auto;
+    }
+}
