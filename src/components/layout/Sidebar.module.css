@@ -8,7 +8,6 @@
     left: 0;
     padding: var(--space-6);
     background-color: var(--color-bg-card);
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
     z-index: var(--z-modal);
     transform: translateX(-100%);
     transition: transform var(--transition-normal);
@@ -141,8 +140,6 @@
 
     .sidebar {
         position: fixed;
-        top: -var(--space-6);
-        left: -var(--space-6);
         height: 94vh;
         margin: var(--space-8) var(--space-6);
         border-radius: var(--radius-lg);

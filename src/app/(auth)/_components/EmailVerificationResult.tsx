@@ -19,7 +19,7 @@ export default function EmailVerificationResult({ token }: EmailVerificationResu
     const [status, setStatus] = useState<Status>("verifying")
 
     useEffect(() => {
-        confirmEmailVerification(token).then((success) => setStatus(success ? "success" : "error"))
+        void confirmEmailVerification(token).then((success) => setStatus(success ? "success" : "error"))
     }, [token])
 
     if (status === "verifying") {

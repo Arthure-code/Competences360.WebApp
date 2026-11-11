@@ -95,7 +95,7 @@ export default function QrScanner({ onScan, code }: QrScannerProps) {
 
         let annule = false
 
-        getJoinQrCodeForCode().then((url) => {
+        void getJoinQrCodeForCode().then((url) => {
             if (!annule) setQrDeLaPage(url ?? null)
         })
 
@@ -112,7 +112,7 @@ export default function QrScanner({ onScan, code }: QrScannerProps) {
 
         let annule = false
 
-        getJoinQrCodeForCode(codeComplet).then((url) => {
+        void getJoinQrCodeForCode(codeComplet).then((url) => {
             // Une réponse arrivée après une nouvelle saisie est périmée.
             if (!annule) setQrDuGroupe(url ?? null)
         })
@@ -257,7 +257,7 @@ export default function QrScanner({ onScan, code }: QrScannerProps) {
             image = requestAnimationFrame(lire)
         }
 
-        demarrer()
+        void demarrer()
 
         // La caméra est relâchée au démontage : changer d'onglet ou fermer la
         // fenêtre doit éteindre le voyant.

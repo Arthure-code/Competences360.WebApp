@@ -30,7 +30,7 @@ export default function BilanView({ module: initialModule, niveauId, dueDate }: 
     const [category, setCategory] = useState<Category | undefined>(undefined)
 
     useEffect(() => {
-        getCategoryById(initialModule.categoryId).then(setCategory)
+        void getCategoryById(initialModule.categoryId).then(setCategory)
     }, [initialModule.categoryId])
 
     const niveau = learningModule.niveaux.find((n) => n.id === niveauId)

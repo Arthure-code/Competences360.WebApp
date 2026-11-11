@@ -25,7 +25,7 @@ export function useHydratedModules(assignedResults: AssignedModuleResult[]): Mod
         let annule = false
 
         function hydrate() {
-            Promise.all(
+            void Promise.all(
                 assignedResults.map((r) =>
                     hydrateModuleProgress(r.module, r.dueDate, r.niveauDueDates))
             ).then((hydrates) => {

@@ -45,7 +45,7 @@ export function useProgression(modules: Module[]): ProgressionStats {
             }))
         )
 
-        apiProgressStorage.loadMany(niveaux.map(({ cle }) => cle))
+        void apiProgressStorage.loadMany(niveaux.map(({ cle }) => cle))
             .then((instantanes) => {
                 if (annule) return
 

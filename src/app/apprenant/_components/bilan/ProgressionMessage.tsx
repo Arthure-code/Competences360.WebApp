@@ -26,7 +26,7 @@ export default function ProgressionMessage({ niveauId, maxScore }: ProgressionMe
         // `annule` écarte une réponse arrivée après un changement d'activité.
         let annule = false
 
-        apiProgressStorage.load(niveauId).then((snapshot) => {
+        void apiProgressStorage.load(niveauId).then((snapshot) => {
             if (annule || !snapshot) return
 
             const currentScore = computeTotalScoreFromAttempts(snapshot.attempts)

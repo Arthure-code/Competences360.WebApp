@@ -77,7 +77,7 @@ export default function UtilisateursView({ organizations }: UtilisateursViewProp
         const org = organizations.find((o) => o.id === orgId)
         if (!org) return
         setIsSearching(true)
-        getUsersForOrganization(org.id, org.name).then((found) => {
+        void getUsersForOrganization(org.id, org.name).then((found) => {
             setResults(found)
             setIsSearching(false)
         })

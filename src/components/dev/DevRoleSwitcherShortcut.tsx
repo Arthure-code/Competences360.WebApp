@@ -54,7 +54,7 @@ export default function DevRoleSwitcherShortcut() {
             const mapping = KEY_TO_SESSION[event.key]
             if (!mapping) return
 
-            setDevSessionKey(mapping.sessionKey).then(() => {
+            void setDevSessionKey(mapping.sessionKey).then(() => {
                 router.push(mapping.home)
                 router.refresh()
             })

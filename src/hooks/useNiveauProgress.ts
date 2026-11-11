@@ -149,7 +149,7 @@ export function useNiveauProgress({
     useEffect(() => {
         let annule = false
 
-        storage.load(niveauId).then((snapshot) => {
+        void storage.load(niveauId).then((snapshot) => {
             if (annule) return
 
             if (snapshot) {
@@ -202,7 +202,7 @@ export function useNiveauProgress({
         if (!isHydrated) return
 
         const minuteur = setTimeout(() => {
-            storage.save(niveauId, {
+            void storage.save(niveauId, {
                 currentIndex,
                 attempts,
                 drafts,
@@ -304,8 +304,8 @@ export function useNiveauProgress({
         // tick, une vraie régression de performance pour rien : la valeur
         // n'a besoin d'être à jour qu'aux mêmes moments que hasCompleted/
         // bestScore changent déjà (une vraie réponse soumise), pas en continu.
-        getCurrentSession().then(({ user }) => {
-            upsertNiveauProgress({
+        void getCurrentSession().then(({ user }) => {
+            void upsertNiveauProgress({
                 userId: user.id,
                 moduleId,
                 niveauId,
@@ -521,8 +521,8 @@ export function useNiveauProgress({
         const nextAttemptNumber = totalAttemptsCount + 1
 
         if (moduleId !== "unknown" && niveauId !== "unknown") {
-            getCurrentSession().then(({ user }) => {
-                logNiveauAttempt({
+            void getCurrentSession().then(({ user }) => {
+                void logNiveauAttempt({
                     userId: user.id,
                     moduleId,
                     niveauId,

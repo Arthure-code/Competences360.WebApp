@@ -43,7 +43,7 @@ export default function ModuleDetailView({ module: initialModule, dueDate }: Rea
     const [category, setCategory] = useState<Category | undefined>(undefined)
 
     useEffect(() => {
-        getCategoryById(initialModule.categoryId).then(setCategory)
+        void getCategoryById(initialModule.categoryId).then(setCategory)
     }, [initialModule.categoryId])
 
     const color = category?.color ?? FALLBACK_COLOR

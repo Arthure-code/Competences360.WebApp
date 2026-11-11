@@ -55,7 +55,7 @@ export default function ModulesView({ assignedResults, categories }: ModulesView
         let annule = false
 
         function hydrate() {
-            Promise.all(
+            void Promise.all(
                 assignedResults.map((result) =>
                     hydrateModuleProgress(result.module, result.dueDate))
             ).then((hydrates) => {

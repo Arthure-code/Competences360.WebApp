@@ -22,7 +22,7 @@ export default function LanguageCard() {
 	useEffect(() => {
 		let annule = false
 
-		lireMesPreferences().then((preferences) => {
+		void lireMesPreferences().then((preferences) => {
 			if (!annule) setLanguage(preferences.preferredLanguage)
 		})
 

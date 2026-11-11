@@ -212,7 +212,6 @@
 .zoomScrollArea {
     width: auto;
     max-width: 100%;
-    min-width: 0;
     /* min-width: 0 — sans ça, un enfant dans un conteneur flex/grid garde
        sa taille de CONTENU minimum par défaut (min-width: auto), ce qui
        annule max-width: 100% et laisse l'image zoomée élargir tout le

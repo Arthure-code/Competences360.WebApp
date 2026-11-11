@@ -59,7 +59,7 @@ export default function JoinGroupModal({ isOpen, onClose, initialCode = "" }: Jo
 
     // Un seul déclenchement, au montage, pas à chaque changement de code tapé manuellement ensuite.
     useEffect(() => {
-        if (initialCode) handleSubmit(initialCode)
+        if (initialCode) void handleSubmit(initialCode)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

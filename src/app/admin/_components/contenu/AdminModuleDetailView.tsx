@@ -66,7 +66,7 @@ export default function AdminModuleDetailView({ module, versions, adminId }: Adm
         if (existingDraft) {
             setRestoreTarget(version)
         } else {
-            reallyRestore(version)
+            void reallyRestore(version)
         }
     }
 

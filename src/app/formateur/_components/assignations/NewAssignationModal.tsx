@@ -65,7 +65,7 @@ export default function NewAssignationModal({
             return
         }
         let cancelled = false
-        getOverriddenGroupAssignment(moduleId, targetId).then((result) => {
+        void getOverriddenGroupAssignment(moduleId, targetId).then((result) => {
             if (!cancelled) setOverriddenGroupName(result?.groupName ?? null)
         })
         return () => {

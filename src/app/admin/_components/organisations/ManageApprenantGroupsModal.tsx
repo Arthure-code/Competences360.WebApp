@@ -34,7 +34,7 @@ export default function ManageApprenantGroupsModal({ isOpen, onClose, apprenant,
     useEffect(() => {
         if (!isOpen) return
         setIsLoading(true)
-        getMyGroups(apprenant.id).then((groups) => {
+        void getMyGroups(apprenant.id).then((groups) => {
             setCurrentGroupIds(new Set(groups.map((g) => g.id)))
             setIsLoading(false)
         })

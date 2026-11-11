@@ -22,7 +22,7 @@ export default function ModuleDetailRow({ module }: ModuleDetailRowProps) {
     useEffect(() => {
         let annule = false
 
-        getModuleProgressSummary(module).then((resultat) => {
+        void getModuleProgressSummary(module).then((resultat) => {
             if (!annule) setSummary(resultat)
         })
 

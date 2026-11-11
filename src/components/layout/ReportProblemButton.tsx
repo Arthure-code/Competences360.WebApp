@@ -64,7 +64,7 @@ export default function ReportProblemButton({ userId, userName, role, organizati
 
     useEffect(() => {
         if (isOpen && view === "list") {
-            getReportsBySubmitter(userId).then(setMyReports)
+            void getReportsBySubmitter(userId).then(setMyReports)
         }
     }, [isOpen, view, userId])
 

@@ -123,7 +123,7 @@ export default function ContentEditor({
     // Reprend le brouillon enregistré pour cette version, s'il existe.
     useEffect(() => {
         let annule = false
-        chargerBrouillon<ModuleVersionContent>(draftKey).then((brouillon) => {
+        void chargerBrouillon<ModuleVersionContent>(draftKey).then((brouillon) => {
             if (annule) return
             if (brouillon) setContent(brouillon)
             setBrouillonCharge(true)
@@ -136,7 +136,7 @@ export default function ContentEditor({
     // Brouillon enregistré à chaque changement : survit à un rafraîchissement ou un changement de page. Jamais en lecture seule.
     useEffect(() => {
         if (readOnly || !brouillonCharge) return
-        enregistrerBrouillon(draftKey, content)
+        void enregistrerBrouillon(draftKey, content)
     }, [draftKey, content, readOnly, brouillonCharge])
 
     // "Sauvegarde serveur" simulée, débattue pour ne pas spammer à chaque frappe.

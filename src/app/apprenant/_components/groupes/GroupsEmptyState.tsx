@@ -66,7 +66,7 @@ export default function GroupsEmptyState({ initialCode = "" }: GroupsEmptyStateP
 
     // Un seul déclenchement, au montage, pas à chaque changement de code tapé manuellement ensuite — scanner doit équivaloir à taper le code et cliquer Rejoindre, pas juste pré-remplir en attendant un clic de plus.
     useEffect(() => {
-        if (initialCode) handleSubmit(initialCode)
+        if (initialCode) void handleSubmit(initialCode)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

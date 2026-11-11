@@ -100,7 +100,7 @@ export default function InvitationTable({
     useEffect(() => {
         let annule = false
         hasHydrated.current = false
-        chargerBrouillon<DraftSnapshot>(draftStorageKey).then((draft) => {
+        void chargerBrouillon<DraftSnapshot>(draftStorageKey).then((draft) => {
             if (annule) return
             const snapshot = draft ?? EMPTY_DRAFT
             setRows(snapshot.rows)
@@ -117,8 +117,8 @@ export default function InvitationTable({
     useEffect(() => {
         if (!hasHydrated.current) return
         const minuteur = setTimeout(() => {
-            if (rows.length === 0 && columns.length === 0) effacerBrouillon(draftStorageKey)
-            else enregistrerBrouillon(draftStorageKey, { rows, columns, checks })
+            if (rows.length === 0 && columns.length === 0) void effacerBrouillon(draftStorageKey)
+            else void enregistrerBrouillon(draftStorageKey, { rows, columns, checks })
         }, DELAI_ENREGISTREMENT_MS)
         return () => clearTimeout(minuteur)
     }, [draftStorageKey, rows, columns, checks])
